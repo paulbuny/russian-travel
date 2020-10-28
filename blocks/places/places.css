@@ -1,5 +1,4 @@
 .places {
-  margin: 0;
   padding: 92px 0;
   display: grid;
   grid-template-columns: minmax(min-content, 984px);
@@ -10,7 +9,6 @@
 @media screen and (max-width: 1204px) {
   .places {
     margin: 48px;
-    padding: 92px 0;
   }
 }
 
