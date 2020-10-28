@@ -1,0 +1,19 @@
+.lead {
+  display: grid;
+  grid-template-columns: minmax(auto, 83.33%);
+  justify-content: center;
+}
+
+@media screen and (max-width: 1204px) {
+  .lead {
+    grid-template-columns: calc(100% - 48px*2);
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 883px) {
+  .lead {
+    grid-template-columns: 100%;
+    margin: 0;
+  }
+}

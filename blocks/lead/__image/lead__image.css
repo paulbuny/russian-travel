@@ -1,0 +1,5 @@
+.lead__image {
+  display: flex;
+  max-width: 100%;
+  object-fit: cover;
+}

@@ -1,6 +1,9 @@
 @import url(../vendors/normalize.css);
 @import url(../fonts/Inter_Web/inter.css);
 .page {
+  display: grid;
+  grid-template-columns: minmax(min-content, 1184px);
+  justify-content: center;
   font-family: "Inter", helvetica, sans-serif;
   color: #fff;
   font-size: 16px;
@@ -10,9 +13,6 @@
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
-  display: grid;
-  grid-template-columns: minmax(min-content, 1184px);
-  justify-content: center;
   min-width: 100%;
   min-height: 100vh;
   background-color: #2A2C2F;
@@ -39,6 +39,16 @@
   .header {
     min-width: 90%;
     margin: 16px 16px 0;
+  }
+}
+.header__logo {
+  object-fit: contain;
+  max-width: 176px;
+}
+
+@media screen and (max-width: 450px) {
+  .header__logo {
+    max-width: 142px;
   }
 }
 .header__lang {
@@ -82,7 +92,7 @@
 
 .lead {
   display: grid;
-  grid-template-columns: minmax(auto, 984px);
+  grid-template-columns: minmax(auto, 83.33%);
   justify-content: center;
 }
 
@@ -145,15 +155,25 @@
   }
 }
 .lead__image-wrapper {
+  margin: 64px 0 0 0;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+@media screen and (max-width: 1204px) {
+  .lead__image-wrapper {
+    margin: 56px 0 0 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .lead__image-wrapper {
+    margin: 16px 0 0 0;
+  }
+}
 .lead__image {
   display: flex;
-  margin: 64px 0 0 0;
   max-width: 100%;
   object-fit: cover;
 }
@@ -161,6 +181,8 @@
 .lead__image-overlay {
   max-width: 100%;
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
 }
 
@@ -184,24 +206,28 @@
   display: grid;
   grid-template-columns: minmax(min-content, 690px);
   justify-content: start;
-  margin: 92px auto;
+  margin: 0 auto;
+  padding: 92px 0;
   box-sizing: border-box;
 }
 
 @media screen and (max-width: 1204px) {
   .intro {
-    margin: 92px 48px;
+    margin: 0 48px;
+    padding: 92px 0;
   }
 }
 @media screen and (max-width: 883px) {
   .intro {
-    margin: 88px 24px;
+    margin: 0 24px;
+    padding: 88px 0;
   }
 }
 @media screen and (max-width: 450px) {
   .intro {
     max-width: 90%;
-    margin: 64px auto;
+    margin: 0 auto;
+    padding: 64px 0;
     box-sizing: border-box;
   }
 }
@@ -250,9 +276,6 @@
   line-height: 1.5;
   list-style: none;
 }
-.intro__list span {
-  font-weight: 900;
-}
 
 .photo-grid {
   display: grid;
@@ -287,8 +310,8 @@
 }
 
 .places {
-  margin: 92px 0;
-  padding: 0;
+  margin: 0;
+  padding: 92px 0;
   display: grid;
   grid-template-columns: minmax(min-content, 984px);
   justify-content: center;
@@ -297,18 +320,21 @@
 
 @media screen and (max-width: 1204px) {
   .places {
-    margin: 92px 48px;
+    margin: 48px;
+    padding: 92px 0;
   }
 }
 @media screen and (max-width: 883px) {
   .places {
-    margin: 88px 0;
+    margin: 0;
+    padding: 88px 0;
     grid-gap: 72px;
   }
 }
 @media screen and (max-width: 450px) {
   .places {
-    grid-gap: 80px;
+    padding: 64px 0;
+    grid-gap: 40px;
   }
 }
 .place {
@@ -402,25 +428,24 @@
   opacity: 0.8;
 }
 
-.place__paragraph p {
+@media screen and (max-width: 450px) {
+  .place__paragraphs {
+    box-sizing: border-box;
+    margin: 0 15px;
+  }
+}
+.place__paragraph {
   margin: 0 0 24px 0;
   font-size: 18px;
   line-height: 1.611;
   font-weight: 400;
 }
-.place__paragraph p:last-child {
-  margin: 0;
+.place__paragraph:last-child {
+  margin-bottom: 0;
 }
 
-@media screen and (max-width: 450px) {
-  .place__paragraph {
-    box-sizing: border-box;
-    margin: 0 15px;
-  }
-}
 .cover {
   position: relative;
-  max-width: 100%;
 }
 
 .cover__overlay {
@@ -520,16 +545,11 @@
   display: flex;
   flex-wrap: wrap;
 }
-.footer__links li {
-  margin-right: 18px;
-}
-.footer__links:last-child {
-  margin: 0;
-}
 
 @media screen and (max-width: 450px) {
   .footer__links {
     flex-direction: column;
+    gap: 32px;
   }
 }
 .footer__link {
@@ -539,6 +559,7 @@
   text-decoration: none;
   color: #fff;
   transition: opacity 0.25s ease-in-out;
+  margin-right: 18px;
 }
 .footer__link:hover {
   opacity: 0.8;

@@ -1,0 +1,6 @@
+.lead__image-overlay {
+  max-width: calc(100% - 30px);
+  min-height: 100%;
+  position: absolute;
+  transform: translateY(-10%);
+}
