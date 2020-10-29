@@ -1,10 +1,16 @@
 .header__lang {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   color: #fff;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-end;
+  display: grid;
+  /*flex-direction: row;*/
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.125rem;
+  align-items: end;
+  justify-content: end;
 }
+
 
 @media screen and (max-width: 450px) {
   .header__lang {

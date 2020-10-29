@@ -8,5 +8,6 @@
   .place__website {
     box-sizing: border-box;
     margin: 0 15px;
+    display: none;
   }
 }
