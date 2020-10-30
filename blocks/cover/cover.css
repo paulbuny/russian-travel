@@ -1,4 +1,10 @@
 .cover {
-  display: flex;
-  min-width: 100%;
+  position: relative;
+  max-width: 100%;
+}
+
+.cover:after {
+  display: block;
+  content: '';
+  padding-bottom: 62.5%;
 }

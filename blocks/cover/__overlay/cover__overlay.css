@@ -1,23 +1,21 @@
 .cover__overlay {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
   width: 100%;
+  text-decoration: none;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
 }
 
-.cover__overlay:after {
+.cover__overlay:after{
   display: block;
   content: '';
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
   right: 0;
-  width: 100%;
+  left: 0;
+  z-index: 1;
   background-color: #2A2C2F;
   opacity: .3;
-  z-index: 1;
   transition: opacity .25s ease-in-out;
 }
 

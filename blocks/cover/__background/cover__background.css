@@ -1,17 +1,18 @@
 .cover__background {
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-content: center;
   align-items: center;
+  justify-content: center;
+  justify-items: center;
   width: 100%;
   background-image: url("../../../images/cover-trains.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   box-sizing: border-box;
-}
-
-.cover__background:before {
-  content: '';
-  display: block;
-  padding-bottom: 62.5%;
 }
