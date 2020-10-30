@@ -1,7 +1,4 @@
 .cover__background {
-  position: absolute;
-  top: 0;
-  bottom: 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -10,9 +7,16 @@
   justify-content: center;
   justify-items: center;
   width: 100%;
+  min-height: 740px;
   background-image: url("../../../images/cover-trains.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 1204px){
+  .cover__background {
+    min-height: 62.500vw;
+  }
 }
